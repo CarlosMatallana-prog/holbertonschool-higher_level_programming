@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 	listint_t *before = list;
 	listint_t *after = list;
 
-	while (after != NULL && after->next)
+	while (after != NULL && after->next != NULL)
 	{
 		before = before->next;
 		after = after->next->next;
