@@ -10,4 +10,4 @@ if lastn == 0:
     to_print = "0"
 if lastn < 6 and lastn != 0:
     to_print = "less than 6 and not 0"
-print("Last figit of {:d} is {:d} and is {:s}".format(number, lastn, to_print))
+print("Last digit of {:d} is {:d} and is {:s}".format(number, lastn, to_print))
