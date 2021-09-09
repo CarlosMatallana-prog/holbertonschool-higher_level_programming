@@ -13,5 +13,5 @@ if __name__ == "__main__":
         while counter < args:
             print("{:d}: {:s}".format(counter, sys.argv[counter]))
             counter += 1
-        else:
-            print("0 arguments.")
+    else:
+        print("0 arguments.")
