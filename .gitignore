@@ -1,8 +1,9 @@
 #ignore all files in each directory
 */*
 
-#unignore .c files in each directory
+#unignore .c .py files in each directory
 !*/*.c
+!*/*.py
 
 #unignore .h header files in each directory
 !*/*.h
