@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
-    if type(value) == int:
+    if int(value):
         try:
             print("{:d}".format(value), end='')
             print()
