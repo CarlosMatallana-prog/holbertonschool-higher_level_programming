@@ -2,9 +2,10 @@
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     if len(my_list_1) > len(my_list_2):
-        eval_list(my_list_1, my_list_2, my_list_1)
+        new_list = eval_list(my_list_1, my_list_2, my_list_1)
     else:
-        eval_list(my_list_1, my_list_2, my_list_2)
+        new_list = eval_list(my_list_1, my_list_2, my_list_2)
+    return new_list
 
 
 def eval_list(my_list_1, my_list_2, list_limit):
