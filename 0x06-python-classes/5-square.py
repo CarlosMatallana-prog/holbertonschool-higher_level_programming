@@ -36,7 +36,7 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-        else:
+        elif self.__size > 0:
             for rows in range(0, self.__size):
                 for columns in range(0, self.__size):
                     print("#", end=' ')
