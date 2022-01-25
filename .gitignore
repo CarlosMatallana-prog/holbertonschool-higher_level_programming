@@ -20,6 +20,9 @@
 #unignore .sh files in each directory
 !*/*.sh
 
+#unignore .txt files in each directory
+!*/*.txt
+
 
 #unignore .gitignore
 !.gitignore
