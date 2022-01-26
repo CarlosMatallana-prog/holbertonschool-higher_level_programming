@@ -21,7 +21,7 @@
 !*/*.sh
 
 #unignore .txt files in each directory
-#!*/*.txt
+!*/*.txt
 !*/tests
 !*/tests/*.txt
 
