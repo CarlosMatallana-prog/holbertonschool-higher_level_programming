@@ -1,6 +1,14 @@
 The ''1-my_list'' module
 ============================
 
+     ####################################################################
+     # 									#
+     #   Import os for testing contents of the file e.g.,		#
+     #                                                                  #
+     #     >>>os.popen('cat -e 1-my_list.py | tail -1').read()[-1]	#
+     #     '\n'								#
+     # 									#
+     ####################################################################
     >>> import os
 
     ### Import MyList.print_sorted from 1-my_list module.
