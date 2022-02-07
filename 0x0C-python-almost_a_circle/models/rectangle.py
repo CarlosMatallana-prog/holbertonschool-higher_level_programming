@@ -22,7 +22,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width_input):
         """ Set the width """
-        self.validate_number("width", width_input)
+        self.check_number("width", width_input)
         if width_input <= 0:
             raise ValueError("width must be > 0")
         self.__width = width_input
@@ -35,7 +35,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height_input):
         """ Set the height """
-        self.validate_number("height", height_input)
+        self.check_number("height", height_input)
         if height_input <= 0:
             raise ValueError("height must be > 0")
         self.__height = height_input
@@ -48,7 +48,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x_input):
         """ Set x """
-        self.validate_number("x", x_input)
+        self.check_number("x", x_input)
         if x_input < 0:
             raise ValueError("x must be >= 0")
         self.__x = x_input
@@ -61,12 +61,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, y_input):
         """ Set y """
-        self.validate_number("y", y_input)
+        self.check_number("y", y_input)
         if y_input < 0:
             raise ValueError("y must be >= 0")
         self.__y = y_input
 
-    def validate_number(self, method, number_input):
+    def check_number(self, method, number_input):
         """ check if the input is an integer """
         if type(number_input) is not int:
             raise TypeError("{} must be an integer".format(method))
+
+    def area(self):
+        """ returns the triangle area """
+        return self.width * self.height
