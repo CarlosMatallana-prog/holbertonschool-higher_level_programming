@@ -20,12 +20,12 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, number_input):
+    def width(self, width_input):
         """ Set the width """
-        self.validate_number("width", number_input)
-        if number_input <= 0:
+        self.validate_number("width", width_input)
+        if width_input <= 0:
             raise ValueError("width must be > 0")
-        self.__width = number_input
+        self.__width = width_input
 
     @property
     def height(self):
@@ -33,12 +33,12 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, number_input):
+    def height(self, height_input):
         """ Set the height """
-        self.validate_number("height", number_input)
-        if number_input <= 0:
+        self.validate_number("height", height_input)
+        if height_input <= 0:
             raise ValueError("height must be > 0")
-        self.__height = number_input
+        self.__height = height_input
 
     @property
     def x(self):
@@ -46,12 +46,12 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, number_input):
+    def x(self, x_input):
         """ Set x """
-        self.validate_number("x", number_input)
-        if number_input <= 0:
-            raise ValueError("x must be > 0")
-        self.__x = number_input
+        self.validate_number("x", x_input)
+        if x_input < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = x_input
 
     @property
     def y(self):
@@ -59,12 +59,12 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, number_input):
+    def y(self, y_input):
         """ Set y """
-        self.validate_number("y", number_input)
-        if number_input <= 0:
-            raise ValueError("y must be > 0")
-        self.__y = number_input
+        self.validate_number("y", y_input)
+        if y_input < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = y_input
 
     def validate_number(self, method, number_input):
         """ check if the input is an integer """
