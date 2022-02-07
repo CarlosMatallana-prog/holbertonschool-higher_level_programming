@@ -74,3 +74,14 @@ class Rectangle(Base):
     def area(self):
         """ returns the triangle area """
         return self.width * self.height
+
+    def display(self):
+        """ Prints the rectangle """
+        print("\n" * self.y, end='')
+        for i in range(self.height):
+            for j in range(self.width + self.x):
+                if j < self.x:
+                    print(' ', end='')
+                else:
+                    print('#', end='')
+            print('')
