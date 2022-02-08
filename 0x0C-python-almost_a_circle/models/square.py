@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" squaer.py """
+""" square.py """
 from models.rectangle import Rectangle
 
 
@@ -13,3 +13,13 @@ class Square(Rectangle):
         """ custom __str__ method """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+    @property
+    def size(self):
+        """ get the size """
+        return self.width
+
+    @size.setter
+    def size(self, number):
+        """ Set the size """
+        self.width = number
+        self.height = number
