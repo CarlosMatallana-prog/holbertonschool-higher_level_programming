@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ rectangle.py """
 from models.base import Base
+from collections import OrderedDict
 
 
 class Rectangle(Base):
@@ -107,3 +108,12 @@ class Rectangle(Base):
             for i in kwargs.keys():
                 if i in dir(self):
                     setattr(self, i, kwargs[i])
+
+    def to_dictionary(self):
+        """  returns the dictionary representation of a Rectangle """
+        ret_dict = OrderedDict()
+        ret_dict["id"] = self.id
+        ret_dict["size"] = self.width
+        ret_dict["x"] = self.x
+        ret_dict["y"] = self.y
+        return dict(ret_dict)

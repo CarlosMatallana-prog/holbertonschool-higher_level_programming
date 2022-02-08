@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ square.py """
 from models.rectangle import Rectangle
+from collections import OrderedDict
 
 
 class Square(Rectangle):
