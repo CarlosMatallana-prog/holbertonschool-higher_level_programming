@@ -62,3 +62,27 @@ class Base():
         if json_string is None:
             json_string = []
         return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set """
+        default = cls(1, 1)
+        default.update(**dictionary)
+        return(default)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load_from_file_csv"""
+        filename = "{}.csv".format(cls.__name__)
+        tmp_dictionary = {}
+        list_of_objects = []
+        try:
+            with open(filename, newline='') as scv_file:
+                reader = csv.DictReader(scv_file)
+                for row in reader:
+                    for key in row:
+                        tmp_dictionary[key] = int(row[key])
+                    dummy = cls.create(**tmp_dictionary)
+                    list_of_objects.append(dummy)
+        except FileNotFoundError:
+            list_of_objects = []
+        return(list_of_objects)
