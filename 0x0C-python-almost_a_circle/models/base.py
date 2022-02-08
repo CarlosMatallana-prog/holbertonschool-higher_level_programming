@@ -86,3 +86,20 @@ class Base():
         except FileNotFoundError:
             list_of_objects = []
         return(list_of_objects)
+
+    @classmethod
+    def load_from_file(cls):
+        """ load_from_file """
+        filename = "{}.json".format(cls.__name__)
+        list_of_objects = []
+
+        try:
+            with open(filename) as json_txt:
+                list_of_dictionaries = cls.from_json_string(json_txt.read())
+                for attributes in list_of_dictionaries:
+                    list_of_objects.append(cls.create(**attributes))
+
+        except FileNotFoundError:
+            list_of_objects = []
+
+        return list_of_objects
