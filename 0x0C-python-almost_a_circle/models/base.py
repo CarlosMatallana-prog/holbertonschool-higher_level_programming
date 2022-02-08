@@ -54,3 +54,11 @@ class Base():
                 writer = csv.DictWriter(csv_file, list_of_headers)
                 writer.writeheader()
                 writer.writerows(list_of_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Returns a list of dictionaries,
+        empty list if json_string is None """
+        if json_string is None:
+            json_string = []
+        return json.loads(json_string)
