@@ -113,7 +113,8 @@ class Rectangle(Base):
         """  returns the dictionary representation of a Rectangle """
         ret_dict = OrderedDict()
         ret_dict["id"] = self.id
-        ret_dict["size"] = self.width
+        ret_dict["width"] = self.width
+        ret_dict["height"] = self.height
         ret_dict["x"] = self.x
         ret_dict["y"] = self.y
         return dict(ret_dict)
