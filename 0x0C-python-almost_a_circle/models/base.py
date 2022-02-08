@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """ base.py """
 import json
-import csv
-from collections import OrderedDict
 
 
 class Base():
@@ -17,3 +15,9 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """  returns the JSON string representation of list_dictionaries """
+        if list_dictionaries is None or bool(list_dictionaries) is False:
+            return "[]"
+        return json.dumps(list_dictionaries)
