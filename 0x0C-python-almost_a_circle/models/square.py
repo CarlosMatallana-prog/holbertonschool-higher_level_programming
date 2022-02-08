@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ square class """
+
     def __init__(self, size, x=0, y=0, id=None):
         """ __init__ method """
         super().__init__(size, size, x, y, id)
@@ -13,6 +14,7 @@ class Square(Rectangle):
         """ custom __str__ method """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+
     @property
     def size(self):
         """ get the size """
@@ -23,7 +25,6 @@ class Square(Rectangle):
         """ Set the size """
         self.width = number
         self.height = number
-
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
