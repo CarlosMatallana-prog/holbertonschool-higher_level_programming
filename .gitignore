@@ -17,6 +17,9 @@
 #unignore .md files in each directory
 !*/*.md
 
+#unignore .md files in each directory
+!*/*.sql
+
 #unignore .sh files in each directory
 !*/*.sh
 
