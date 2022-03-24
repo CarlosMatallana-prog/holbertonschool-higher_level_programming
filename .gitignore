@@ -1,6 +1,9 @@
 #ignore all files in each directory
 */*
 
+#unignore Make files in each directory
+!*/*-Makefile
+
 #unignore .c .py files in each directory
 !*/*.c
 !*/*.py
