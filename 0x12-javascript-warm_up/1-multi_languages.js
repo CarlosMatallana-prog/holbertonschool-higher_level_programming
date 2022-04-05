@@ -4,6 +4,6 @@
 const myArray = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
 // Iterate through array.
-myArray.forEach(function (word, index, myArray) {
-    console.log(word);
+myArray.forEach(function (phrase, index, myArray) {
+    console.log(phrase);
 });
