@@ -4,9 +4,10 @@
 #unignore Make files in each directory
 !*/*-Makefile
 
-#unignore .c .py files in each directory
+#unignore .c .py .js files in each directory
 !*/*.c
 !*/*.py
+!*/*.js
 
 #unignore .h header files in each directory
 !*/*.h
