@@ -37,6 +37,7 @@
 
 #ignore compiled files
 *-main.c
+*-main.js
 *-main.py
 
 #ignore backup files
