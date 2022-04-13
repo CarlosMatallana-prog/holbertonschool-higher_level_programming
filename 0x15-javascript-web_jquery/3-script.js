@@ -1,3 +1,4 @@
+const $ = window.$;
 $(document).ready(function () {
   const item = $('DIV#red_header');
   const header = $('header');

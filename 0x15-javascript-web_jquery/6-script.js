@@ -1,3 +1,4 @@
+const $ = window.$;
 $(document).ready(function () {
   const item = $('DIV#update_header');
   const newHeader = 'New Header!!!';

@@ -1,3 +1,4 @@
+const $ = window.$;
 window.onload = () => {
   const listItems = $('.my_list');
   const addItem = $('#add_item');
